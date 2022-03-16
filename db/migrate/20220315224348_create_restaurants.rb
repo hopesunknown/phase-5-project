@@ -3,9 +3,9 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
     create_table :restaurants do |t|
       t.string :name
       t.integer :restaurant_rating
-      t.belongs_to :cuisine, null: false, foreign_key: true
-      t.belongs_to :user, null: false, foreign_key: true
-      t.belongs_to :location, null: false, foreign_key: true
+      t.integer :cuisine_id
+      t.integer :user_id
+      t.integer :location_id
       t.integer :revenue
 
       t.timestamps
